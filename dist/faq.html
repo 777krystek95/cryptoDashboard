@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,300;0,400;0,700;1,100;1,300&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+		<link rel="stylesheet" href="/dist/output.css" />
+		<link rel="stylesheet" href="/src/faq.css" />
+
+		<title>CryptoDashboard</title>
+	</head>
+	<body class="my-bg">
+		<div class="wrapper my-bg">
+			<nav class="nav">
+				<div class="logo">
+					<p class="logo-heading pl-4 text-6xl">CryptoDashboard</p>
+				</div>
+
+				<div
+					class="right-nav flex justify-between items-center w-1/4 mr-20 md:w-1/6"
+				>
+					<div
+						class="nav-icon-box flex justify-center items-center space-y-1 space-x-4"
+					>
+						<i class="nav-icon fa-solid fa-magnifying-glass text-2xl"></i>
+						<p class="nav-icon-text text-2xl ml-0">Szukaj</p>
+					</div>
+
+					<div
+						class="nav-icon-box flex justify-center items-center space-y-1 space-x-4"
+					>
+						<i class="nav-icon fa-regular fa-user text-2xl"></i>
+						<p class="nav-icon-text text-2xl">Profil</p>
+					</div>
+				</div>
+			</nav>
+
+			<aside class="aside border-2 border-gray-50">
+				<div
+					class="upper-nav pl-4 flex flex-col justify-start items-start space-y-10 mt-10 w-full h-[50%] text-3xl"
+				>
+					<a href="index.html"
+						><p class="nav-text w-full py-4 hover:text-amber-300">
+							<i class="fa-solid fa-house"></i> Dashboard
+						</p></a
+					>
+					<a href="faq.html"
+						><p class="nav-text w-full py-4 hover:text-amber-300">
+							<i class="fa-solid fa-circle-info"></i> FAQ
+						</p></a
+					>
+				</div>
+				<div
+					class="lower-nav pl-4 flex flex-col justify-around items-start w-full h-[20%] text-3xl"
+				>
+					<p class="nav-text hover:text-amber-300">
+						<i class="fa-solid fa-gear"></i> Settings
+					</p>
+					<p class="nav-text hover:text-amber-300">
+						<i class="fa-solid fa-right-from-bracket"></i> Log Out
+					</p>
+				</div>
+			</aside>
+
+			<button class="burger-btn hidden">
+				<i class="fa-solid fa-bars"></i>
+			</button>
+
+			<div class="main-wrapper">
+				<main class="about-crypto-section">
+					<section class="about-crypto flex flex-col">
+						<div>
+							<h2 class="section-heading text-5xl pb-8 pt-12 text-center">
+								Pytania i odpowiedzi
+							</h2>
+						</div>
+
+						<div class="faq flex flex-col justify-center items-center">
+							<button
+								class="faq-box rounded-md w-[85%] border-b-2 text-4xl pt-4 pb-8 font-bold my-second-bg"
+							>
+								Czy inwestowanie w kryptowaluty jest bezpieczne?
+							</button>
+							<div class="faq-answer hide rounded-md w-[70%] text-xl py-4">
+								<p>
+									Inwestowanie w kryptowaluty niesie ze sobą ryzyko, podobnie
+									jak w przypadku innych aktywów. Wartość kryptowalut może się
+									zmieniać szybko i znacznie, więc ważne jest przeprowadzenie
+									własnych badań i rozważenie ryzyka przed podjęciem decyzji
+									inwestycyjnej.
+								</p>
+							</div>
+
+							<button
+								class="faq-box rounded-md w-[85%] border-b-2 text-4xl pt-10 pb-8 font-bold my-second-bg"
+							>
+								Jakie są najpopularniejsze kryptowaluty?
+							</button>
+							<div class="faq-answer hide rounded-md w-[70%] text-xl py-4">
+								<p>
+									Bitcoin (BTC) i Ethereum (ETH) są dwoma z najbardziej znanych
+									i najczęściej używanych kryptowalut, ale istnieje wiele innych
+									popularnych, takich jak Litecoin (LTC), Ripple (XRP) i Bitcoin
+									Cash (BCH).
+								</p>
+							</div>
+
+							<button
+								class="faq-box rounded-md w-[85%] border-b-2 text-4xl pt-10 pb-8 font-bold my-second-bg"
+							>
+								Jak kupić kryptowaluty?
+							</button>
+							<div class="faq-answer hide rounded-md w-[70%] text-xl py-4">
+								<p>
+									Istnieje wiele platform i giełd kryptowalut, które umożliwiają
+									zakup, sprzedaż i przechowywanie kryptowalut. Możesz
+									zarejestrować się na takiej platformie, zdeponować środki i
+									wymienić je na wybraną kryptowalutę.
+								</p>
+							</div>
+
+							<button
+								class="faq-box rounded-md w-[85%] border-b-2 text-4xl pt-10 pb-8 font-bold my-second-bg"
+							>
+								Czy muszę być ekspertem, aby inwestować w kryptowaluty?
+							</button>
+							<div class="faq-answer hide rounded-md w-[70%] text-xl py-4">
+								<p>
+									Choć znajomość rynku kryptowalut może być przydatna, nie jest
+									konieczna. Istnieją narzędzia i aplikacje, które ułatwiają
+									inwestowanie w kryptowaluty nawet osobom bez wcześniejszego
+									doświadczenia, ale zawsze warto zdobyć podstawową wiedzę przed
+									rozpoczęciem inwestycji.
+								</p>
+							</div>
+
+							<button
+								class="faq-box rounded-md w-[85%] border-b-2 text-4xl pt-10 pb-8 font-bold my-second-bg"
+							>
+								Jak bezpiecznie przechowywać kryptowaluty?
+							</button>
+							<div class="faq-answer hide rounded-md w-[70%] text-xl py-4">
+								<p>
+									Najbezpieczniejszym sposobem przechowywania kryptowalut jest
+									korzystanie z portfeli sprzętowych lub portfeli offline, które
+									zapewniają dodatkową warstwę zabezpieczeń przed cyberatakami.
+									Ważne jest również regularne tworzenie kopii zapasowych kluczy
+									prywatnych.
+								</p>
+							</div>
+
+							<button
+								class="faq-box rounded-md w-[85%] border-b-2 text-4xl pt-10 pb-8 font-bold my-second-bg"
+							>
+								Czy kryptowaluty są legalne?
+							</button>
+							<div class="faq-answer hide rounded-md w-[70%] text-xl py-4">
+								<p>
+									W większości krajów kryptowaluty są legalne, ale regulacje
+									mogą się różnić. Niektóre kraje akceptują kryptowaluty jako
+									legalne środki płatnicze, podczas gdy inne mogą mieć
+									ograniczenia lub zakazy dotyczące ich używania.
+								</p>
+							</div>
+
+							<button
+								class="faq-box rounded-md w-[85%] border-b-2 text-4xl pt-10 pb-8 font-bold my-second-bg"
+							>
+								Jakie są korzyści płynące z wykorzystania technologii
+								blockchain??
+							</button>
+							<div class="faq-answer hide rounded-md w-[70%] text-xl py-4">
+								<p>
+									Technologia blockchain, która stoi za większością kryptowalut,
+									oferuje wiele korzyści, takich jak decentralizacja,
+									przejrzystość, bezpieczeństwo transakcji oraz potencjał do
+									zastosowania w różnych dziedzinach, takich jak finanse,
+									logistyka czy opieka zdrowotna..
+								</p>
+							</div>
+
+							<button
+								class="faq-box rounded-md w-[85%] border-b-2 text-4xl pt-10 pb-8 font-bold my-second-bg"
+							>
+								Czy inwestowanie w kryptowaluty jest opłacalne na dłuższą metę??
+							</button>
+							<div class="faq-answer hide rounded-md w-[70%] text-xl py-4">
+								<p>
+									Perspektywy inwestycyjne dotyczące kryptowalut mogą być różne
+									w zależności od wielu czynników, takich jak rynek,
+									technologiczne innowacje, regulacje i ogólny trend. Niektórzy
+									eksperci uważają, że kryptowaluty mają potencjał wzrostu na
+									dłuższą metę, ale należy pamiętać, że inwestycje zawsze niosą
+									ryzyko i wymagają dokładnego zbadania przed podjęciem
+									decyzji..
+								</p>
+							</div>
+						</div>
+					</section>
+				</main>
+			</div>
+		</div>
+
+		<script
+			src="https://kit.fontawesome.com/23696a2a66.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="./faq.js"></script>
+	</body>
+</html>

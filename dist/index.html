@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,300;0,400;0,700;1,100;1,300&display=swap"
+			rel="stylesheet"
+		/>
+		<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+	
+		<link rel="stylesheet" href="/dist/output.css" />
+		<title>CryptoDashboard</title>
+	</head>
+	<body class="my-bg">
+		<div class="wrapper my-bg">
+			<nav class="nav">
+				<div class="logo">
+					<p class="logo-heading pl-4 text-6xl varela-round-regular">CryptoDashboard</p>
+				</div>
+
+				<div class="refresh-box">
+					<button class="refresh-btn text-md">Refresh</button>
+				</div>
+
+				<div class="right-nav flex justify-between items-center w-1/4 mr-20 md:w-1/6">
+
+					<div class="nav-icon-box flex justify-center items-center space-y-1 space-x-4">
+						<i class="nav-icon fa-solid fa-magnifying-glass text-2xl"></i>
+						<p class="nav-icon-text text-2xl ml-0">Szukaj</p>
+					</div>
+
+					<div class="nav-icon-box flex justify-center items-center space-y-1 space-x-4">
+						<i class="nav-icon fa-regular fa-user text-2xl"></i>
+						<p class="nav-icon-text text-2xl">Profil</p>
+					</div>
+
+				</div>
+			</nav>
+
+			<aside class="aside border-2 border-gray-50">
+				<div
+					class="upper-nav pl-4 flex flex-col justify-start items-start space-y-10 mt-10 w-full h-[50%] text-3xl"
+				>
+					<a href="index.html"><p class="nav-text w-full py-4 hover:text-amber-300"><i class="fa-solid fa-house"></i> Dashboard</p></a>
+					<a href="faq.html"><p class="nav-text w-full py-4 hover:text-amber-300"><i class="fa-solid fa-circle-info"></i> FAQ</p></a>
+				</div>
+				<div
+					class="lower-nav pl-4 flex flex-col justify-around items-start w-full h-[20%] text-3xl"
+				>
+				<p class="nav-text hover:text-amber-300"><i class="fa-solid fa-gear"></i> Settings</p>
+				<p class="nav-text hover:text-amber-300"><i class="fa-solid fa-right-from-bracket"></i> Log Out</p>
+				</div>
+			</aside>
+
+			<button class="burger-btn hidden"><i class="fa-solid fa-bars"></i></button>
+
+			<div class="main-wrapper">
+
+				<header class="header flex flex-col space-y-6">
+					<div class="upper flex flex-row justify-between w-full">
+						<div
+							class="balance-box flex flex-col justify-center items-start w-1/4 pl-4 py-8 space-y-4 bg-zinc-700 shadow-md shadow-zinc-500 ml-6"
+						>
+							<h3 class="balance-heading text-lg">Total Balance</h3>
+							<p class="balance-text text-5xl">125 000$</p>
+						</div>
+	
+						<div
+							class="days-box flex justify-center items-center text-center w-1/2 mr-6"
+						>
+							<div
+								class="single-day-box w-full h-full flex flex-col justify-center items-start bg-zinc-600 shadow-md shadow-zinc-500 space-y-2"
+							>
+								<p class="days-number text-4xl pl-4">Today</p>
+								<p class="procentage text-2xl pl-4">-2.5%</p>
+							</div>
+	
+							<div
+								class="single-day-box w-full h-full flex flex-col justify-center items-start bg-zinc-600 shadow-md shadow-zinc-500 space-y-2"
+							>
+								<p class="days-number text-4xl pl-4">7 Days</p>
+								<p class="procentage text-2xl pl-4">-2.5%</p>
+							</div>
+	
+							<div
+								class="single-day-box w-full h-full flex flex-col justify-center items-start bg-zinc-600 shadow-md shadow-zinc-500 space-y-2"
+							>
+								<p class="days-number text-4xl pl-4">30 Days</p>
+								<p class="procentage text-2xl pl-4">-2.5%</p>
+							</div>
+						</div>
+					</div>
+	
+					<div>
+						<h2 class="down-heading section-heading text-5xl pb-8 pt-12 text-center varela-round-regular">Cryptocurrency list</h2>
+					</div>
+	
+					
+					<div class="down flex flex-col justify-center items-center space-y-1 ">
+
+						<div class="crypto-list-box flex justify-evenly items-center text-3xl  w-[95%] font-bold uppercase ">
+							<div class="py-4 w-full text-center">
+								<p class="crypto-name crypto-heading">Name</p>
+							</div>
+
+							<div class="py-4 w-full text-center">
+								<p class="crypto-symbol crypto-heading">Symbol</p>
+							</div>
+
+							<div class="py-4 w-full text-center">
+								<p class="crypto-price crypto-heading">Price</p>
+							</div>
+							
+							<div class="py-4 w-full text-center ">
+								<p class="crypto-change crypto-heading px">change</p>
+							</div>
+						</div>
+	
+						<div class="crypto-list-box flex justify-evenly items-center text-3xl  w-[95%] py-4 "></div> 
+					</div>
+				</header>
+	
+				<main class="main flex flex-col justify-center items-center">
+	
+					<div class="main-heading pt-10">
+						<h2 class="section-heading text-5xl py-2 varela-round-regular">Wykresy</h2>
+					</div>
+	
+					<div class="chart-box">
+						<div id="chart" class="text-slate-950"></div>
+					</div>
+				</main>
+
+			</div>
+
+			<section class="right-panel border-2 border-gray-50">
+				<div class="border-b-2">
+					<h2 class="portfolio-heading text-center text-amber-300 py-4 px-4 text-5xl">My Portfolio</h2>
+				</div>
+				<div class="portfolio-box space-y-4">
+			</section>
+		</div>
+		
+
+		<script src="./chart.js"></script>
+		<script src="https://kit.fontawesome.com/23696a2a66.js" crossorigin="anonymous"></script>
+		<script src="./script.js"></script>
+
+	</body>
+</html>

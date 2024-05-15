@@ -1,0 +1,17 @@
+{
+  "name": "cryptodashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./src/style.css -o ./dist/output.css && tailwindcss -i ./src/faq.css -o ./dist/outputFaq.css && tailwindcss -i ./src/wallet.css -o ./dist/outputWallet.css",
+    "watch": "tailwindcss -i ./src/style.css -o ./dist/output.css --watch && tailwindcss -i ./src/faq.css -o ./dist/outputFaq.css --watch && tailwindcss -i ./src/wallet.css -o ./dist/outputWallet.css --watch "
+  },
+  "keywords": [],
+  "author": "Krystian",
+  "license": "ISC",
+  "devDependencies": {
+    "daisyui": "^4.7.3",
+    "tailwindcss": "^3.4.1"
+  }
+}

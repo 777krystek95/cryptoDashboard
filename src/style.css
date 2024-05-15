@@ -1,0 +1,533 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	font-size: 62.5%;
+}
+
+body {
+	color: rgb(255, 255, 255);
+	height: 100vh;
+	font-family: "Roboto", sans-serif;
+}
+
+.my-bg {
+	background-color: rgb(8, 8, 27);
+}
+.my-second-bg {
+	background-color: rgba(12, 12, 42, 0.397);
+}
+
+.text-downgrade {
+	color: rgb(255, 97, 97);
+}
+.text-upgrade {
+	color: rgb(44, 250, 25);
+}
+
+.single-crypto-margin {
+	margin: 0 2px;
+	border-radius: 10px;
+}
+
+.varela-round-regular {
+	font-family: "Varela Round", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.logo-box {
+	height: 20px;
+	width: 20px;
+	margin-left: 5px;
+}
+
+.crypto-logo {
+	height: 100%;
+	width: 100%;
+}
+
+.crypto-symbol {
+	padding-left: 5px;
+}
+
+.add-btn-color {
+	color: rgb(72, 255, 0);
+}
+
+.wrapper {
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr 2fr 2fr 2fr 2fr;
+	grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1400px;
+}
+
+.burger-rotate {
+	rotate: 90deg;
+}
+
+.burger-btn {
+	transition: rotate 0.3s;
+}
+
+.crypto-name {
+	text-transform: capitalize;
+}
+.crypto-name-portfolio {
+	text-transform: capitalize;
+}
+
+.refresh-btn {
+	padding: 10px 20px;
+	font-weight: bold;
+	border-radius: 5px;
+	text-transform: uppercase;
+	color: black;
+	background-color: gold;
+	letter-spacing: 1px;
+	transition: all 0.2s;
+	box-shadow: inset -1px -1px 4px rgb(34, 33, 33);
+}
+
+.refresh-btn:hover {
+	box-shadow: inset 1px 1px 4px rgb(0, 0, 0);
+}
+
+.nav {
+	grid-column: 1/6;
+	grid-row: 1/2;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navbar {
+	height: 100%;
+	background-color: rgb(125, 77, 9);
+}
+
+.aside {
+	grid-column: 1/2;
+	grid-row: 2/6;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.main-wrapper {
+	height: 100%;
+	grid-column: 2/5;
+	grid-row: 2/6;
+	overflow: auto;
+}
+
+.chart-box {
+	height: 100%;
+	width: 70%;
+	border-radius: 15px;
+}
+
+.right-panel {
+	grid-column: 5/6;
+	grid-row: 2/6;
+	overflow: auto;
+}
+
+.hide {
+	display: none;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 375px) and (max-width: 450px) {
+	.aside {
+		position: absolute;
+		top: 40%;
+		height: 10vh;
+		width: 25%;
+		background-color: rgb(8, 11, 163);
+		transform: translateX(-100%);
+		transition: transform 0.5s;
+	}
+
+	.aside-on {
+		transform: translateX(0%);
+	}
+
+	.burger-btn {
+		height: 25%;
+		font-size: 2.5rem;
+		color: rgb(242, 209, 44);
+		z-index: 10000;
+	}
+
+	.nav-icon-box {
+		height: 100%;
+		width: 100%;
+		flex-direction: column;
+	}
+
+	.nav-icon-text {
+		font-size: 1.2rem;
+		margin-left: 0px !important;
+	}
+
+	.refresh-btn {
+		padding: 6px 12px;
+		font-size: 1rem;
+	}
+
+	.logo-heading {
+		font-size: 1.5rem;
+	}
+
+	.balance-box {
+		padding-left: 0px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.balance-heading {
+		text-align: center;
+		font-size: 0.8rem;
+		padding-left: 0px;
+	}
+
+	.balance-text {
+		font-size: 0.8rem;
+	}
+	.single-day-box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.days-number {
+		padding-left: 0px;
+		font-size: 0.9rem;
+	}
+
+	.procentage {
+		font-size: 0.8rem;
+		padding-left: 0px;
+	}
+
+	.crypto-name,
+	.crypto-symbol,
+	.crypto-price,
+	.crypto-change {
+		font-size: 1rem;
+		text-transform: capitalize;
+	}
+
+	.crypto-name-portfolio {
+		font-size: 1.4rem;
+	}
+	.crypto-logo-portfolio {
+		font-size: 1rem;
+	}
+	.crypto-price-portfolio {
+		font-size: 1.2rem;
+	}
+
+	.add-btn {
+		padding: 0px 5px;
+		font-size: 1.2rem;
+	}
+
+	.borderek {
+		border: 1px solid white;
+	}
+
+	.crypto-heading {
+		font-size: 1.5rem;
+	}
+
+	.portfolio-heading {
+		font-size: 1.6rem;
+	}
+
+	.section-heading {
+		font-size: 2.2rem;
+	}
+
+	.nav-text {
+		font-size: 1.2rem;
+	}
+
+	.delete-btn {
+		font-size: 1.4rem;
+	}
+}
+
+@media (min-width: 450px) and (max-width: 575px) {
+	.nav-icon-box {
+		flex-direction: column;
+	}
+
+	.nav-icon-text {
+		font-size: 0.8rem;
+		margin-left: 0px !important;
+	}
+
+	.nav-icon-box {
+		height: 100%;
+		width: 100%;
+		flex-direction: column;
+	}
+
+	.nav-icon-text {
+		font-size: 1.4rem;
+		margin-left: 0px !important;
+	}
+
+	.logo-heading {
+		font-size: 1.5rem;
+	}
+
+	.balance-box {
+		padding-left: 0px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.balance-heading {
+		text-align: center;
+		font-size: 0.8rem;
+		padding-left: 0px;
+	}
+
+	.balance-text {
+		font-size: 0.8rem;
+	}
+	.single-day-box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.days-number {
+		padding-left: 0px;
+		font-size: 0.9rem;
+	}
+
+	.procentage {
+		font-size: 0.8rem;
+		padding-left: 0px;
+	}
+
+	.crypto-name,
+	.crypto-symbol,
+	.crypto-price,
+	.crypto-change {
+		font-size: 1.1rem;
+	}
+
+	.add-btn {
+		padding: 0px 5px;
+		font-size: 1.4rem;
+	}
+
+	.crypto-symbol {
+		padding-left: 5px;
+	}
+
+	.crypto-name-portfolio {
+		font-size: 1.6rem;
+	}
+	.crypto-logo-portfolio {
+		font-size: 1.2rem;
+	}
+	.crypto-price-portfolio {
+		font-size: 1.4rem;
+	}
+
+	.portfolio-heading {
+		font-size: 1.8rem;
+	}
+
+	.section-heading {
+		font-size: 2.2rem;
+	}
+
+	.nav-text {
+		font-size: 1.2rem;
+	}
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
+	.burger-btn {
+		display: block;
+	}
+
+	.aside {
+		position: absolute;
+		top: 20%;
+		height: 80vh;
+		width: 25%;
+		background-color: rgb(8, 8, 27);
+		transform: translateX(-100%);
+		transition: transform 0.5s;
+	}
+
+	.aside-on {
+		transform: translateX(0%);
+	}
+
+	.burger-btn {
+		height: 25%;
+		font-size: 2.5rem;
+		color: rgb(242, 209, 44);
+		z-index: 10000;
+	}
+
+	.faq-box {
+		font-size: 1.7rem;
+		width: 100%;
+	}
+
+	.faq-answer {
+		width: 80%;
+	}
+}
+
+@media (min-width: 575px) and (max-width: 768px) {
+	.nav-icon-box {
+		flex-direction: column;
+	}
+
+	.nav-icon-text {
+		font-size: 1.2rem;
+		margin-left: 0px !important;
+	}
+
+	.logo-heading {
+		font-size: 2rem;
+	}
+
+	.balance-heading {
+		font-size: 1.1rem;
+	}
+
+	.balance-text {
+		font-size: 1.5rem;
+	}
+
+	.days-number {
+		font-size: 1.4rem;
+	}
+
+	.procentage {
+		font-size: 1.1rem;
+	}
+
+	.crypto-name,
+	.crypto-symbol,
+	.crypto-price,
+	.crypto-change {
+		font-size: 1.2rem;
+	}
+
+	.portfolio-heading {
+		font-size: 1.8rem;
+	}
+
+	.section-heading {
+		font-size: 2.2rem;
+	}
+
+	.nav-text {
+		font-size: 1.4rem;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.nav-icon-box {
+		flex-direction: column;
+	}
+
+	.nav-icon-text {
+		font-size: 1.2rem;
+		margin-left: 0px !important;
+	}
+
+	.logo-heading {
+		font-size: 3rem;
+	}
+
+	.balance-text {
+		font-size: 2.1rem;
+	}
+
+	.days-number {
+		font-size: 1.8rem;
+	}
+
+	.procentage {
+		font-size: 1.4rem;
+	}
+
+	.crypto-name,
+	.crypto-symbol,
+	.crypto-price,
+	.crypto-change {
+		font-size: 1.4rem;
+	}
+
+	.portfolio-heading {
+		font-size: 2.4rem;
+	}
+
+	.nav-text {
+		font-size: 1.2rem;
+	}
+}
+
+@media (min-width: 991px) and (max-width: 1200px) {
+	.logo-heading {
+		font-size: 3.2rem;
+	}
+
+	.balance-text {
+		font-size: 2.5rem;
+	}
+
+	.days-number {
+		font-size: 2.3rem;
+	}
+
+	.procentage {
+		font-size: 1.6rem;
+	}
+
+	.crypto-name,
+	.crypto-symbol,
+	.crypto-price,
+	.crypto-change {
+		font-size: 1.6rem;
+	}
+
+	.portfolio-heading {
+		font-size: 2.4rem;
+	}
+
+	.nav-text {
+		font-size: 1.4rem;
+	}
+}
